@@ -4,12 +4,12 @@ import { BiSwim } from "react-icons/bi";
 import { MdDirectionsBike } from "react-icons/md";
 import { LiaDumbbellSolid } from "react-icons/lia";
 
-const Aside = ({ text }) => {
+const Aside = ({ labels }) => {
   return (
     <aside>
       <nav>
         {/* <ul>
-          {text.links.map((item, index) => (
+          {labels.links.map((item, index) => (
             <li key={index}>
               <svg
                 width="42"
@@ -32,7 +32,7 @@ const Aside = ({ text }) => {
         </ul>
       </nav>
 
-      <span className="copyright">{text.copyright}</span>
+      <span className="copyright">{labels.copyright}</span>
     </aside>
   );
 };

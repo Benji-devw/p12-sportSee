@@ -1,17 +1,17 @@
 import React from 'react';
 import Header from './Header';
 import Aside from './Aside.jsx';
-import text from '/public/fr.json';
+import labels from '/public/fr.json';
 
 const Layout = ({ children }) => {
-  // console.log(text.header_text);
-  return (
+  // console.log(labels.header_labels);
+    return (
     <div>
-      <Header text={text.header_text} />
-      <Aside text={text.aside_text} />
-      {children}
+        <Header labels={labels.header_labels} />
+        <Aside labels={labels.aside_labels} />
+        {children}
     </div>
-  );
+    );
 };
 
 export default Layout;

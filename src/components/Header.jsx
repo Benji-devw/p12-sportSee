@@ -1,17 +1,17 @@
 import "../styles/header.css";
 
-const Header = ({ text }) => {
-  // console.log(text.title);
+const Header = ({ labels }) => {
+  // console.log(labels.title);
   return (
     <header>
       <span className="title">
-        <img src={"/public/logo.png"} alt="logo" />
-        {text.title}
+        <img src={"/logo.png"} alt="logo" />
+        {labels.title}
       </span>
 
       <nav>
         <ul>
-          {text.links.map((item, index) => (
+          {labels.links.map((item, index) => (
             <span key={index}>
               <a>{item}</a>
             </span>
