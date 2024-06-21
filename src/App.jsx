@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { getUser, getPerformances, getActivities, getSessionAverage } from "./api/serviceApi";
 import Layout from "./components/Layout";
-// import Home from './Home'
-import { getUser } from "./api/serviceApi";
 import NutrimentCard from "./components/NutrimentCard";
 
 function App() {
@@ -13,23 +12,21 @@ function App() {
         const fetchData = async () => {
             try {
                 const { user, nutriments } = await getUser(18);
-                setUserData({ firstName: user.firstName, score: user.percentScore, id: user.id});
-				const allNutriments = nutriments.map(nutriment => ({
-					icon: nutriment.nutrimentIcon,
-					name: nutriment.nutrimentName,
-					unit: nutriment.nutrimentUnit,
-					value: nutriment.value
-				}));
-            setNutrimentsData(allNutriments);
+				// const performances = await getPerformances(18);
+				// console.log(performances);
+				// const activities = await getActivities(18);
+				// console.log(activities);
+				// const sessionAverage = await getSessionAverage(18);
+				// console.log(sessionAverage);
+
+                setUserData(user);
+            	setNutrimentsData(nutriments);
             } catch (error) {
                 console.error("Erreur lors de la récupération des données utilisateur:", error);
             }
         };
         fetchData();
     }, []);
-	// console.log(nutrimentsData);
-	// console.log(userData);
-
 
 	return (
 		<Layout>

@@ -1,9 +1,9 @@
 const NutrimentCard = ({ nutriment }) => {
     return (
         <div>
-            <img src={nutriment.icon} alt={nutriment.name} />
-            <p>{nutriment.value} {nutriment.unit}</p>
-            <p>{nutriment.name}</p>
+            <img src={nutriment.nutrimentIcon} alt={nutriment.nutrimentName} />
+            <p>{nutriment.value} {nutriment.nutrimentUnit}</p>
+            <p>{nutriment.nutrimentName}</p>
         </div>
     );
 };

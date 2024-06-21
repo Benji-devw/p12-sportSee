@@ -1,12 +1,8 @@
 export default class User {
-    constructor(id, userInfos, score) {
+    constructor(id, firstName, score) {
         this.id = id;
         this.score = score;
-        this.userInfos = userInfos;
-    }
-
-    get firstName() {
-        return `${this.userInfos.firstName}`;
+        this.firstName = firstName;
     }
 
     get percentScore() {
