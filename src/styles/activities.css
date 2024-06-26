@@ -1,0 +1,27 @@
+
+
+.legends {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+.color-dot-red {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #E60000;
+}
+
+.color-dot-black {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.graph {
+    height: 300px;
+    width: 500px;
+}

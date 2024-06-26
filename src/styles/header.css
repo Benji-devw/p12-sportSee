@@ -5,7 +5,7 @@ header {
   right: 0;
   z-index: 1000;
 
-  height: 91px;
+  height: 70px;
 
   background-color: #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -40,14 +40,6 @@ nav ul {
 
   align-items: center;
   gap: 1rem;
-  padding: 10%;
+  padding: 2rem;
   list-style: none;
-}
-nav a {
-  color: #fff;
-  cursor: pointer;
-  font-weight: 400;
-}
-nav a:hover {
-  text-decoration: underline;
 }

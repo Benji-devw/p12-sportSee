@@ -1,0 +1,51 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+  padding-left: 10rem;
+  /* text-align: center; */
+}
+
+section {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  padding: .3rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+.right {
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+}
+
+.activities_wrapper {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+}
+
+.left-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.legends {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
