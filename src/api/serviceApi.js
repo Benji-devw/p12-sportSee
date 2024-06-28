@@ -1,8 +1,8 @@
 import User from './constructor/user';
 import Nutriment from './constructor/nutriment';
 import Performence from './constructor/performance';
-import ActivitySession from './constructor/activitySession';
 import AverageSession from './constructor/averageSession';
+import ActivitySession from './constructor/activitySession';
 
 function getUrl(fileName, id, slug) {
     if (import.meta.env.MOCK) {

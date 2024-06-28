@@ -6,8 +6,12 @@ import {
   getSessionAverage,
 } from "./api/serviceApi";
 import Layout from "./components/Layout";
-import NutrimentCard from "./components/NutrimentCard";
+import {NutrimentCard} from "./components/NutrimentCard";
 import Activities from "./components/Activities";
+
+
+// TODO: Ajouter REACT-ROUTER
+// TODO: Ajouter page 404
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -42,18 +46,18 @@ function App() {
         <div>Chargement...</div>
       ) : (
         <section>
-          <h1>Bonjour {userData.firstName}</h1>
+          <h1>Bonjour <span>{userData.firstName}</span></h1>
 
           <div className="wrapper">
-            <div className="right">
-              <div className="nutriment">
+            <article className="right">
+              <div className="wrapper-nutriment">
                 {nutrimentsData.map((nutriment, index) => (
                   <NutrimentCard key={index} nutriment={nutriment} />
                 ))}
               </div>
-            </div>
+            </article>
 
-            <div className="left">
+            <article className="left">
               <div className="activities_wrapper">
                 <Activities />
               </div>
@@ -74,7 +78,7 @@ function App() {
                   {/* <Score score={score} /> */}
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </section>
       )}

@@ -9,11 +9,11 @@ export default class Nutriment {
             case "calorieCount":
                 return "/calories.png";
             case "proteinCount":
-                return "/proteines.png";
+                return "/chicken.png";
             case "carbohydrateCount":
-                return "/glucides.png";
+                return "/apple.png";
             case "lipidCount":
-                return "/lipides.png";
+                return "/cheeseburger.png";
             default:
                 return "/default.png";
         }
