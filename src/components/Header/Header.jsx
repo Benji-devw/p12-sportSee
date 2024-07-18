@@ -1,17 +1,17 @@
 import "./header.css";
 
-const Header = ({ labels }) => {
-  // console.log(labels.title);
+const Header = () => {
+  const links = ["Accueil", "Profil", "Réglage", "Communauté"]
   return (
     <header>
       <span className="title">
         <img src={"/logo.png"} alt="logo" />
-        {labels.title}
+        SportSee
       </span>
 
       <nav>
         <ul>
-          {labels.links.map((item, index) => (
+          {links.map((item, index) => (
             <span key={index}>
               <a>{item}</a>
             </span>

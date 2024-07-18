@@ -1,6 +1,6 @@
 import "./aside.css";
 
-const Aside = ({ labels }) => {
+const Aside = () => {
   const imgs = [
     { src: "/public/yoga.png", alt: "yoga" },
     { src: "/public/swim.png", alt: "swim" },
@@ -20,7 +20,7 @@ const Aside = ({ labels }) => {
         </ul>
       </nav>
 
-      <span className="copyright">{labels.copyright}</span>
+      <span className="copyright">Copiryght, SportSee 2020</span>
     </aside>
   );
 };
