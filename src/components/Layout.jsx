@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import Aside from './Aside.jsx';
+import Header from './Header/Header.jsx';
+import Aside from './Aside/Aside.jsx';
 import labels from '/public/fr.json';
 
 const Layout = ({ children }) => {

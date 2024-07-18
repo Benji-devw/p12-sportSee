@@ -15,7 +15,10 @@ export default class ActivitySession {
         return <Bar
             dataKey="kilogram"
             fill="#282D30"
-            activeBar={<Rectangle fill="pink" stroke="blue" />}
+            radius={[10, 10, 0, 0]}
+            maxBarSize={10}
+            barGap={20}
+            activeBar={<Rectangle />}
         />
     }
 
@@ -23,7 +26,10 @@ export default class ActivitySession {
         return <Bar
             dataKey="calories"
             fill="#E60000"
-            activeBar={<Rectangle fill="gold" stroke="purple" />}
+            radius={[10, 10, 0, 0]}
+            maxBarSize={10}
+            barGap={20}
+            activeBar={<Rectangle />}
         />
     }
     

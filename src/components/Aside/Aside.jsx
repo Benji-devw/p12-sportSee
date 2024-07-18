@@ -1,4 +1,4 @@
-import "../styles/aside.css";
+import "./aside.css";
 
 const Aside = ({ labels }) => {
   const imgs = [

@@ -33,7 +33,22 @@
                 "calories": 162
             },
             {
-                "day": "2020-07-07",
+                "day": "2020-07-08",
+                "kilogram": 69,
+                "calories": 390
+            },
+            {
+                "day": "2020-07-09",
+                "kilogram": 69,
+                "calories": 390
+            },
+            {
+                "day": "2020-07-10",
+                "kilogram": 69,
+                "calories": 390
+            },
+            {
+                "day": "2020-07-11",
                 "kilogram": 69,
                 "calories": 390
             }

@@ -1,4 +1,4 @@
-import "../styles/header.css";
+import "./header.css";
 
 const Header = ({ labels }) => {
   // console.log(labels.title);

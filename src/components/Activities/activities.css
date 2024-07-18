@@ -1,17 +1,23 @@
+/* .activities {
+    width: 100%;
+} */
 
+.recharts-layer .recharts-bar {
+    max-width: 2px;
+}
 
 .legends {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     align-items: center;
-  }
+}
 
 .color-dot-red {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #E60000;
+    background-color: #e60000;
 }
 
 .color-dot-black {
