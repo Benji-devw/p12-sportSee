@@ -39,8 +39,9 @@ aside ul {
 }
 
 aside .copyright {
+    color: #fff;
     position: absolute;
-    bottom: 8rem;
+    bottom: 10rem;
     left: -2.5rem;
     width: 200px;
     font-size: 0.8rem;

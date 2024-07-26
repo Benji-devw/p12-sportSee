@@ -1,6 +1,7 @@
-/* .activities {
-    width: 100%;
-} */
+.graph {
+    height: 300px;
+}
+
 
 .recharts-layer .recharts-bar {
     max-width: 2px;
@@ -27,7 +28,3 @@
     background-color: #000;
 }
 
-.graph {
-    height: 300px;
-    width: 500px;
-}

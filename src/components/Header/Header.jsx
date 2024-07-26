@@ -1,7 +1,7 @@
 import "./header.css";
 
 const Header = () => {
-  const links = ["Accueil", "Profil", "Réglage", "Communauté"]
+  const headerLinks = ["Accueil", "Profil", "Réglage", "Communauté"]
   return (
     <header>
       <span className="title">
@@ -11,7 +11,7 @@ const Header = () => {
 
       <nav>
         <ul>
-          {links.map((item, index) => (
+          {headerLinks.map((item, index) => (
             <span key={index}>
               <a>{item}</a>
             </span>

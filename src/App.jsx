@@ -4,6 +4,7 @@ import { getUser, getPerformances, getSessionAverage } from "./api/serviceApi";
 import Layout from "./components/Layout";
 import { NutrimentCard } from "./components/Nutriment/NutrimentCard";
 import { Activities } from "./components/Activities/Activities";
+import { AverageSession } from "./components/AverageSession/AverageSession";
 
 // TODO: Ajouter REACT-ROUTER
 // TODO: Ajouter page 404
@@ -62,18 +63,7 @@ function App() {
 
                             <div className="left-bottom">
                                 <div className="average_wrapper">
-                                    <p>TESTETSETSTETSE</p>
-                                    <br />
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                    {/* <Average average={average} /> */}
+                                    <AverageSession />
                                 </div>
 
                                 <div className="performance_wrapper">

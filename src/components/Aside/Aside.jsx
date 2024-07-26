@@ -1,18 +1,18 @@
 import "./aside.css";
 
 const Aside = () => {
-  const imgs = [
-    { src: "/public/yoga.png", alt: "yoga" },
-    { src: "/public/swim.png", alt: "swim" },
-    { src: "/public/bike.png", alt: "bike" },
-    { src: "/public/alter.png", alt: "alter" },
+  const asideIcons = [
+    { src: "/public/medias/yoga.png", alt: "yoga" },
+    { src: "/public/medias/swim.png", alt: "swim" },
+    { src: "/public/medias/bike.png", alt: "bike" },
+    { src: "/public/medias/alter.png", alt: "alter" }
   ];
 
   return (
     <aside>
       <nav>
         <ul>
-          {imgs.map((item, index) => (
+          {asideIcons.map((item, index) => (
             <li key={index}>
               <img src={item.src} alt={item.alt} />
             </li>

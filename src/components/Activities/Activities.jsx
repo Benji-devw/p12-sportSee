@@ -56,7 +56,7 @@ export const Activities = () => {
                             bottom: 5,
                         }}
                     >
-                        <CartesianGrid strokeDasharray="3 3" />
+                        <CartesianGrid strokeDasharray="2 2" vertical="False"  />
                         <XAxis dataKey="day" />
                         <YAxis />
                         <Tooltip cursor={{ strokeWidth: 2 }} viewBox={{ x: 0, y: 0, width: 400, height: 400 }} />
