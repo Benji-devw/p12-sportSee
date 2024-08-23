@@ -5,6 +5,7 @@ export default class User {
         this.firstName = firstName;
     }
 
+    // Getters
     get percentScore() {
         return `${this.score * 100}`;
     }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "./averageSession.css";
+import "./averageSession.css";
 import { getSessionAverage } from "../../api/serviceApi";
 import {
     LineChart,
@@ -15,14 +15,13 @@ import {
 //FIXME: Display the average session CHART
 
 export const AverageSession = () => {
-    const [averageSession, averageSessionData] = useState([]);
+    const [averageSession, setAverageSession] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const averageSession = await getSessionAverage(18);
-                // console.log(averageSession);
-                averageSessionData(averageSession);
+                const averageSessionData = await getSessionAverage(18);
+                setAverageSession(averageSessionData);
             } catch (error) {
                 console.error(
                     "Erreur lors de la récupération des données utilisateur:",
@@ -32,10 +31,9 @@ export const AverageSession = () => {
         };
         fetchData();
     }, []);
-    console.log(JSON.stringify(averageSession));
 
     return (
-      <article className="graph">
+        <article className="graph averageSession-wrapper">
             {averageSession.length && (
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart
@@ -49,9 +47,7 @@ export const AverageSession = () => {
                             bottom: 5,
                         }}
                     >
-                        <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="convertDay" />
-                        <YAxis />
                         <Tooltip />
                         <Legend />
                         <Line

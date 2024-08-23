@@ -4,6 +4,7 @@ export default class Nutriment {
         this.value = value;
     }
 
+    // Getters
     get nutrimentIcon() {
         switch(this.key) {
             case "calorieCount":

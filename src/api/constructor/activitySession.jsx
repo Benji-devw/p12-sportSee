@@ -7,6 +7,7 @@ export default class ActivitySession {
         this.calories = calories;
     }
 
+    // Getters
     get day() {
         return this.date.getDate();
     }

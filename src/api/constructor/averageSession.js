@@ -4,6 +4,7 @@ export default class AverageSession {
         this.sessionLength = sessionLength;
     }
 
+    // Getters
     get length() {
         return `${this.sessionLength} min`;
     }
