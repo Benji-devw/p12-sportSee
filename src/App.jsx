@@ -62,9 +62,9 @@ function App() {
                             </div>
 
                             <div className="left-bottom">
-                                <div className="average_wrapper">
+                                
                                     <AverageSession />
-                                </div>
+                                
 
                                 <div className="performance_wrapper">
                                     <p>TESTETSETSTETSE</p>

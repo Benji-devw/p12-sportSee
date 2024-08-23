@@ -68,14 +68,12 @@ export const getActivities = async (id) => {
 };
 
 export const getSessionAverage = async (id) => {
-    const response = await fetch(
-        getUrl("getAverage", id, "average-sessions")
-    );
+    const response = await fetch(getUrl("getAverageSession", id, "average-sessions"));
     if (!response.ok) {
         throw new Error(`API call failed with status ${response.status}`);
     }
     const data = await response.json();
-    console.log(data);
+
     return data.data.sessions.map((average) => {
         return new AverageSession(average.day, average.sessionLength);
     });

@@ -7,15 +7,15 @@ export default class Nutriment {
     get nutrimentIcon() {
         switch(this.key) {
             case "calorieCount":
-                return "/calories.png";
+                return "/medias/calories.png";
             case "proteinCount":
-                return "/chicken.png";
+                return "/medias/chicken.png";
             case "carbohydrateCount":
-                return "/apple.png";
+                return "/medias/apple.png";
             case "lipidCount":
-                return "/cheeseburger.png";
+                return "/medias/cheeseburger.png";
             default:
-                return "/default.png";
+                return "/medias/default.png";
         }
     }
 

@@ -2,10 +2,10 @@ import "./aside.css";
 
 const Aside = () => {
   const asideIcons = [
-    { src: "/public/medias/yoga.png", alt: "yoga" },
-    { src: "/public/medias/swim.png", alt: "swim" },
-    { src: "/public/medias/bike.png", alt: "bike" },
-    { src: "/public/medias/alter.png", alt: "alter" }
+    { src: "/medias/yoga.png", alt: "yoga" },
+    { src: "/medias/swim.png", alt: "swim" },
+    { src: "/medias/bike.png", alt: "bike" },
+    { src: "/medias/alter.png", alt: "alter" }
   ];
 
   return (

@@ -56,6 +56,12 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
+.graph {
+    flex: 1;
+    height: 300px;
+    /* min-width: 30%; */
+}
+
 @media (prefers-color-scheme: light) {
     :root {
         color: #213547;
