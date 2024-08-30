@@ -36,11 +36,11 @@ export const Performances = () => {
                     <RadarChart
                         cx="50%"
                         cy="50%"
-                        outerRadius="80%"
+                        outerRadius="50%"
                         data={performances}
                     >
                         <PolarGrid />
-                        <PolarAngleAxis dataKey="label" />
+                        <PolarAngleAxis dataKey="label" tick={{ fontSize: 10, fill: '#fff' }} />
                         <Radar
                             dataKey="value"
                             fill="#ff0000"

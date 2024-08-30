@@ -1,17 +1,18 @@
 .averageSession-wrapper {
     position: relative;
     width: 100%;
-    height: 263px;
+    height: 200px;
     padding: 0;
     border-radius: 5px;
     background-color: #ff0000;
 }
 
-.legends {
+.averageSession-wrapper .legends {
     position: absolute;
     font-weight: 500;
     width: 160px;
-    top: 40px;
+    top: 30px;
     left: 30px;
+    font-size: .9rem;
     color: #ffffff79;
 }

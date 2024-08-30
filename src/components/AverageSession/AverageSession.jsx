@@ -5,11 +5,8 @@ import {
     LineChart,
     Line,
     XAxis,
-    CartesianGrid,
     Tooltip,
-    Legend,
     ResponsiveContainer,
-    YAxis,
 } from "recharts";
 
 export const AverageSession = () => {
