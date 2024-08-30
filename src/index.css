@@ -5,6 +5,7 @@
     --main-color: #e60000;
     --text-grey: #74798C;
     --bg-grey: #f9f9f9;
+    /* --bg-grey: #74798C; */
 }
 
 a {
@@ -17,6 +18,7 @@ a:hover {
 }
 
 body {
+    height: 100vh;
     margin: 0;
     display: flex;
     place-items: center;
@@ -27,9 +29,14 @@ body {
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
+    margin-bottom: 0;
 }
 h1 span {
     color: #e60000;
+}
+h3 {
+    font-weight: 200;
+    margin-bottom: 3rem;
 }
 
 button {

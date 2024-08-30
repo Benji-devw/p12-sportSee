@@ -36,7 +36,7 @@ export const Activities = () => {
             </div>
 
             <article className="graph">
-                <ResponsiveContainer width="100%" height="130%">
+                <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                         data={activities}
                         barGap={2}

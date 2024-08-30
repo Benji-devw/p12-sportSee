@@ -18,7 +18,7 @@ function App() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const { user, nutriments } = await getUser(18);
+                const { user, nutriments } = await getUser(12);
                 setUserData(user);
                 setNutrimentsData(nutriments);
             } catch (error) {
@@ -42,6 +42,7 @@ function App() {
                     <h1>
                         Bonjour <span>{userData.firstName}</span>
                     </h1>
+                    <h3>Félicitation ! Vous avez explosé vos objectifs hier 👏</h3>
 
                     <div className="wrapper">
                         <article className="right">
