@@ -28,7 +28,6 @@ export const Activities = () => {
         };
         fetchData();
     }, []);
-    console.log(activities);
 
     return (
         <div className="activities">

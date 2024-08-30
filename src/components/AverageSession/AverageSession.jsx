@@ -12,8 +12,6 @@ import {
     YAxis,
 } from "recharts";
 
-//FIXME: Display the average session CHART
-
 export const AverageSession = () => {
     const [averageSession, setAverageSession] = useState([]);
 
@@ -34,6 +32,9 @@ export const AverageSession = () => {
 
     return (
         <article className="graph averageSession-wrapper">
+            <div className="legends">
+                <span>Durée moyenne des sessions</span>
+            </div>
             {averageSession.length && (
                 <ResponsiveContainer width="100%" height="100%">
                     <LineChart
@@ -41,20 +42,47 @@ export const AverageSession = () => {
                         height={300}
                         data={averageSession}
                         margin={{
-                            top: 5,
-                            right: 30,
-                            left: 20,
+                            top: 100,
+                            right: 0,
+                            left: 0,
                             bottom: 5,
                         }}
                     >
-                        <XAxis dataKey="convertDay" />
+                        <defs>
+                            <linearGradient
+                                id="colorGradient"
+                                x1="0"
+                                y1="0"
+                                x2="1"
+                                y2="0"
+                            >
+                                <stop
+                                    offset="0%"
+                                    stopColor="white"
+                                    stopOpacity={0.2}
+                                />
+                                <stop
+                                    offset="100%"
+                                    stopColor="white"
+                                    stopOpacity={1}
+                                />
+                            </linearGradient>
+                        </defs>
+                        <XAxis
+                            dataKey="convertDay"
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{ fill: "#ffffff79" }}
+                            padding={{ left: 20, right: 20 }}
+                        />
                         <Tooltip />
-                        {/* <Legend /> */}
                         <Line
-                            type="monotone"
+                            type="natural"
                             dataKey="sessionLength"
-                            stroke="#8884d8"
-                            activeDot={{ r: 8 }}
+                            stroke="url(#colorGradient)"
+                            strokeWidth={2}
+                            dot={false}
+                            // activeDot={{ r: 8 }}
                         />
                     </LineChart>
                 </ResponsiveContainer>
