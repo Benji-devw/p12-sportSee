@@ -6,7 +6,7 @@ import {
 } from "recharts";
 
 export const Score = ({ score }) => {
-    console.log(score);
+    // console.log(score);
 
     return (
         <article className="graph score-wrapper">

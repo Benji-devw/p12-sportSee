@@ -17,8 +17,7 @@ export default class ActivitySession {
             dataKey="kilogram"
             fill="#282D30"
             radius={[10, 10, 0, 0]}
-            maxBarSize={10}
-            barGap={20}
+            maxBarSize={8}
             activeBar={<Rectangle />}
         />
     }
@@ -28,8 +27,7 @@ export default class ActivitySession {
             dataKey="calories"
             fill="#E60000"
             radius={[10, 10, 0, 0]}
-            maxBarSize={10}
-            barGap={20}
+            maxBarSize={8}
             activeBar={<Rectangle />}
         />
     }

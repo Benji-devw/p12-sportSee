@@ -45,7 +45,7 @@ const Card = styled.div`
     margin: 0 0 2rem 2rem;
     padding: 1rem;
     border-radius: 5px;
-    background-color: #fbfbfb;
+    background-color: #f9f9f9;
 `;
 
 const Text = styled.div`

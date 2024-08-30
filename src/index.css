@@ -2,7 +2,9 @@
     font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     
-    --bg-grey: #b7b7b7;
+    --main-color: #e60000;
+    --text-grey: #74798C;
+    --bg-grey: #f9f9f9;
 }
 
 a {

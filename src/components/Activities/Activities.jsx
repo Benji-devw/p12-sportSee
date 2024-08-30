@@ -18,8 +18,6 @@ export const Activities = () => {
         const fetchData = async () => {
             try {
                 const activities = await getActivities(18);
-                // console.log(activities);
-
                 setactivitiesData(activities);
             } catch (error) {
                 console.error(
@@ -30,37 +28,66 @@ export const Activities = () => {
         };
         fetchData();
     }, []);
-    // console.log(activities);
+    console.log(activities);
 
     return (
         <div className="activities">
             <div className="legends">
-                <h3>Activité quotidienne</h3>
-                {/* <span className="color-dot-black"></span>
-                <span>Poids (kg)</span>
-                <span className="color-dot-red"></span>
-                <span>Calories brûlées (kCal)</span> */}
+                <span>Activité quotidienne</span>
             </div>
 
-            {/* graph */}
             <article className="graph">
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height="130%">
                     <BarChart
-                        width={500}
-                        height={300}
                         data={activities}
+                        barGap={2}
+                        barCategoryGap="30%"
                         margin={{
                             top: 5,
-                            right: 0,
-                            left: 0,
-                            bottom: 5,
+                            right: 30,
+                            left: 30,
+                            bottom: 0,
                         }}
                     >
-                        <CartesianGrid strokeDasharray="2 2" vertical="False"  />
-                        <XAxis dataKey="day" />
-                        <YAxis />
-                        <Tooltip cursor={{ strokeWidth: 2 }} viewBox={{ x: 0, y: 0, width: 400, height: 400 }} />
-                        <Legend verticalAlign="top" height={36} />
+                        <CartesianGrid strokeDasharray="2 2" vertical={false} />
+                        <XAxis
+                            dataKey="day"
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{ fill: "#74798C" }}
+                        />
+                        <YAxis
+                            orientation="right"
+                            tickCount={3}
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{ fill: "#74798C" }}
+                        />
+                        <Tooltip
+                            contentStyle={{
+                                backgroundColor: "#fff",
+                                color: "#222",
+                                width: "100px",
+                            }}
+                            wrapperStyle={{ width: "20px" }}
+                        />
+                        <Legend
+                            verticalAlign="top"
+                            height={56}
+                            align="right"
+                            iconSize={10}
+                            iconType="circle"
+                            formatter={(value) => (
+                                <span
+                                    style={{
+                                        marginLeft: "10px",
+                                        color: "#74798C",
+                                    }}
+                                >
+                                    {value}
+                                </span>
+                            )}
+                        />
                         {activities.length && activities[0].kgBar}
                         {activities.length && activities[0].calBar}
                     </BarChart>

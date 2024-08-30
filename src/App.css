@@ -16,6 +16,7 @@ section {
 .graph {
     flex: 1;
     height: 200px;
+    padding: .5rem;
     /* min-width: 30%;
     max-width: 100%; */
 }
