@@ -6,7 +6,6 @@ import {
     RadarChart,
     PolarGrid,
     PolarAngleAxis,
-    PolarRadiusAxis,
     ResponsiveContainer,
 } from "recharts";
 
@@ -27,7 +26,7 @@ export const Performances = () => {
         };
         fetchData();
     }, []);
-    console.log(performances);
+    // console.log(performances);
     
 
     return (
@@ -43,9 +42,7 @@ export const Performances = () => {
                         <PolarGrid />
                         <PolarAngleAxis dataKey="label" />
                         <Radar
-                            name="Mike"
                             dataKey="value"
-                            // stroke="#ff0000"
                             fill="#ff0000"
                             fillOpacity={0.6}
                         />

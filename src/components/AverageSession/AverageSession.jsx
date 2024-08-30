@@ -49,7 +49,7 @@ export const AverageSession = () => {
                     >
                         <XAxis dataKey="convertDay" />
                         <Tooltip />
-                        <Legend />
+                        {/* <Legend /> */}
                         <Line
                             type="monotone"
                             dataKey="sessionLength"

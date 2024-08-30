@@ -6,6 +6,7 @@ import { NutrimentCard } from "./components/Nutriment/NutrimentCard";
 import { Activities } from "./components/Activities/Activities";
 import { AverageSession } from "./components/AverageSession/AverageSession";
 import { Performances } from "./components/Performances/Performances";
+import { Score } from "./components/Score/Score";
 
 // TODO: Ajouter REACT-ROUTER
 // TODO: Ajouter page 404
@@ -29,6 +30,8 @@ function App() {
         };
         fetchData();
     }, []);
+    console.log(userData);
+    
 
     return (
         <Layout>
@@ -58,7 +61,7 @@ function App() {
                             <div className="left-bottom">
                                 <AverageSession />
                                 <Performances />
-                                <p>TESTETSETSTETSE</p>
+                                <Score score={userData.scorePieValue} />
                             </div>
                         </article>
                     </div>

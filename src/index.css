@@ -1,15 +1,8 @@
 :root {
     font-family: "Roboto", system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
-
-    color-scheme: light dark;
-    color: #1a1a1a;
-    background-color: #fff;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    
+    --bg-grey: #b7b7b7;
 }
 
 a {
@@ -56,11 +49,6 @@ button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
 
-.graph {
-    flex: 1;
-    height: 300px;
-    /* min-width: 30%; */
-}
 
 @media (prefers-color-scheme: light) {
     :root {
