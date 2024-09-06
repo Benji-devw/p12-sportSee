@@ -7,6 +7,9 @@ import {
 
 export const Score = ({ score }) => {
     // console.log(score);
+    const calculateEndAngle = (score) => {
+        return 90 + (360 * score[0].score / 100);
+      };
 
     return (
         <article className="graph score-wrapper">
@@ -38,7 +41,7 @@ export const Score = ({ score }) => {
                         dominantBaseline="middle"
                         fontSize={".8rem"}
                     >
-                        <tspan x="50%" dy="0" style={{fontSize: '20px', fontWeight: 'bold', width: '30px' }}>{score[0].score * 100}%</tspan>
+                        <tspan x="50%" dy="0" style={{fontSize: '20px', fontWeight: 'bold', width: '30px' }}>{score[0].score}%</tspan>
                         <tspan x="50%" dy="1.5em" fill="#74798C">de votre</tspan>
                         <tspan x="50%" dy="1.5em" fill="#74798C">objectif</tspan>
                     </text>
@@ -46,13 +49,12 @@ export const Score = ({ score }) => {
                         data={score}
                         dataKey="score"
                         nameKey="name"
-                        cx="50%"
-                        cy="50%"
                         innerRadius={65}
                         outerRadius={73}
                         stroke="none"
                         cornerRadius={10}
                         startAngle={90}
+                        endAngle={calculateEndAngle(score)}
                     ></Pie>
                 </PieChart>
             </ResponsiveContainer>

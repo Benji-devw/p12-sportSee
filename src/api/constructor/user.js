@@ -6,14 +6,10 @@ export default class User {
     }
 
     // Getters
-    get percentScore() {
-        return `${this.score * 100}`;
-    }
-
     get scorePieValue() {
         return [
             {
-                score: this.score,
+                score: this.score * 100,
                 fill: '#e60000',
             },
             {
