@@ -9,13 +9,13 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
-export const Performances = () => {
+export const Performances = ({id}) => {
     const [performances, setPerformances] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const performancesData = await getPerformances(18);
+                const performancesData = await getPerformances(id);
                 setPerformances(performancesData);
             } catch (error) {
                 console.error(

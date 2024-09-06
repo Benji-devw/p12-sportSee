@@ -13,6 +13,14 @@
     width: 160px;
     top: 20px;
     left: 20px;
-    font-size: .9rem;
+    font-size: 0.9rem;
     color: #ffffff79;
+}
+
+.averageSession-wrapper .custom-tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    color: #000;
 }

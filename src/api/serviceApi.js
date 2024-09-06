@@ -37,7 +37,7 @@ export const getUser = async (id) => {
     const user = new User(
         data.data.id,
         data.data.userInfos.firstName,
-        data.data.score
+        data.data.score || data.data.todayScore
     );
 
     // Get nutriments from the API

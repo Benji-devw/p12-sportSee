@@ -7,28 +7,26 @@
     background-color: var(--bg-grey);
 }
 
-.recharts-legend-icon {
+.activities_wrapper .recharts-legend-icon {
     border-radius: 50%; /* Utilisez 50% pour obtenir des icônes complètement arrondies */
     width: 20px; /* Ajustez la largeur selon vos besoins */
     height: 20px;
 }
 
-.legends {
+.activities_wrapper .legends {
     position: absolute;
     font-weight: 500;
     top: 13px;
     left: 40px;
 }
 
-/* .color-dot-red {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #e60000;
+.activities_wrapper .custom-tooltip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: .8rem;
 }
-.color-dot-black {
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #000;
-} */

@@ -9,13 +9,24 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
-export const AverageSession = () => {
+const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="custom-tooltip" style={{ height: "40px", width:'50px', backgroundColor: '#fff', padding: "3px" }}>
+                <p className="label">{`${payload[0].value}`}min</p>
+            </div>
+        );
+    }
+    return null;
+};
+
+export const AverageSession = ({id}) => {
     const [averageSession, setAverageSession] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const averageSessionData = await getSessionAverage(18);
+                const averageSessionData = await getSessionAverage(id);
                 setAverageSession(averageSessionData);
             } catch (error) {
                 console.error(
@@ -70,9 +81,14 @@ export const AverageSession = () => {
                             axisLine={false}
                             tickLine={false}
                             tick={{ fill: "#ffffff79" }}
+                            tickMargin={20}
+                            height={50}
                             padding={{ left: 20, right: 20 }}
                         />
-                        <Tooltip />
+                        <Tooltip 
+                            position={{ y: 40 }}
+                            content={<CustomTooltip />}
+                        />
                         <Line
                             type="natural"
                             dataKey="sessionLength"

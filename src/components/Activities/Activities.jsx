@@ -11,13 +11,25 @@ import {
     ResponsiveContainer,
 } from "recharts";
 
-export const Activities = () => {
+const CustomTooltip = ({ active, payload }) => {
+    if (active && payload && payload.length) {
+        return (
+            <div className="custom-tooltip">
+                <p className="label">{`${payload[0].value}`}Kg</p>
+                <p className="label">{`${payload[1].value}`}Kcal</p>
+            </div>
+        );
+    }
+    return null;
+};
+
+export const Activities = ({id}) => {
     const [activities, setactivitiesData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const activities = await getActivities(18);
+                const activities = await getActivities(id);
                 setactivitiesData(activities);
             } catch (error) {
                 console.error(
@@ -63,12 +75,8 @@ export const Activities = () => {
                             tick={{ fill: "#74798C" }}
                         />
                         <Tooltip
-                            contentStyle={{
-                                backgroundColor: "#fff",
-                                color: "#222",
-                                width: "100px",
-                            }}
-                            wrapperStyle={{ width: "20px" }}
+                            content={<CustomTooltip />}
+                            position={{ y: 40 }}
                         />
                         <Legend
                             verticalAlign="top"
