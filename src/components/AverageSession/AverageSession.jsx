@@ -13,7 +13,7 @@ const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
         return (
             <div className="custom-tooltip" style={{ height: "40px", width:'50px', backgroundColor: '#fff', padding: "3px" }}>
-                <p className="label">{`${payload[0].value}`}min</p>
+                <p className="label">{`${payload[0].payload.length}`}</p>
             </div>
         );
     }

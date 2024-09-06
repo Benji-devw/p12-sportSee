@@ -10,22 +10,7 @@ export default class AverageSession {
     }
 
     get convertDay() {
-        switch (this.day) {
-            case 1:
-                return "L";
-            case 2:
-            case 3:
-                return "M";
-            case 4:
-                return "J";
-            case 5:
-                return "V";
-            case 6:
-                return "S";
-            case 7:
-                return "D";
-            default:
-                return "Jour inconnu";
-        }
+        const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+        return days[this.day - 1];
     }
 }
