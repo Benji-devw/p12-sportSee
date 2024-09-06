@@ -1,0 +1,28 @@
+.nutriment-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 2rem 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.nutriment-card img {
+    display: flex;
+    padding: 0.8rem;
+    margin: 0 1rem 0 1rem;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.nutriment-card p:nth-child(1) {
+    margin: 0;
+    font-weight: bold;
+}
+.nutriment-card p:nth-child(2) {
+    margin: 0;
+    font-weight: 500;
+    color: #74798c;
+}
