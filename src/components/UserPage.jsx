@@ -34,7 +34,7 @@ function UserPage() {
     return (
         <div>
             {!userData ? (
-                <div>Chargement...</div>
+                <div style={{textAlign: "center"}}>Chargement...</div>
             ) : (
                 <section>
                     <h1>
