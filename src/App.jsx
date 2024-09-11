@@ -4,7 +4,6 @@ import NotFound from "./components/NotFound";
 import UserPage from "./components/UserPage";
 
 function App() {
-    // const navigate = useNavigate();
     return (
         <Router>
             <Layout>
